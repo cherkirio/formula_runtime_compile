@@ -19,7 +19,7 @@ public class Main {
     public static void main(String... args) throws Exception {
         if (args.length == 0) {
             // test
-            args = new String[]{"arg0 + arg1 + arg0 * 2", "10", "-5"};
+            args = new String[]{"cos(arg0) + pow(arg1,2) + arg0 * 2", "10", "-5"};
         }
         String formula = args[0];
         Number[] params = new Number[args.length - 1];
@@ -145,8 +145,9 @@ public class Main {
 
         StringBuilder sb = new StringBuilder();
         int i = 0;
+        sb.append("\n");
         for (Integer index : argsIndexes) {
-            sb.append("\t\t\t\tdouble arg").append(index).append(" = args[").append(i++).append("].doubleValue();\n");
+            sb.append("\t\tdouble arg").append(index).append(" = args[").append(i++).append("].doubleValue();\n");
 
         }
         return sb.toString();

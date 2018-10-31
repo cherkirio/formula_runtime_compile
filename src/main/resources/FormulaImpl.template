@@ -6,9 +6,9 @@ public class FormulaImpl extends Formula {
     @Override
     public Number calculate(Number ... args) {
 
-       %ARGS_INIT%
+        %ARGS_INIT%
 
-       return %FORMULA%;
+        return %FORMULA%;
 
     }
 
