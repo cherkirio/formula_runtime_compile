@@ -98,6 +98,7 @@ public class Main {
         }
         if (Util.compile(file) != 0) {
             LOG.error("Cant compile formula file:\n{}", formulaTemplateData);
+            throw new Exception("Cant compile formula file");
 
         }
         return createFormulaInstance();
